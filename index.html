@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script src="/main.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div class="header">
+        <div class="heading">To-Do List</div>
+        <div id="dateTime" class="heading time">11:20 PM, 21 May</div>
+      </div>
+
+      <div class="inputContainer">
+        <input id="task" name="task" type="text" placeholder="Add your task" />
+        <button onclick="createTask()">Add</button>
+      </div>
+      <div class="list" id="toDoList"></div>
+    </div>
+  </body>
+</html>
