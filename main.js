@@ -125,7 +125,10 @@ setInterval(updateDateTime, 1000);
 
 window.onload = () => {
   let toDoList = JSON.parse(localStorage.getItem("toDoList"));
-  addTask(toDoList);
+
+  if (toDoList) {
+    addTask(toDoList);
+  }
 
   updateDateTime();
 
