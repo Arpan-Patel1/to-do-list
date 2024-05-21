@@ -1,10 +1,3 @@
-window.onload = () => {
-  let toDoList = JSON.parse(localStorage.getItem("toDoList"));
-  addTask(toDoList);
-
-  updateDateTime();
-};
-
 const checkToDo = (id) => {
   let toDoList = JSON.parse(localStorage.getItem("toDoList"));
   toDoList = toDoList.map((toDo) => {
@@ -129,3 +122,13 @@ const monthName = [
 ];
 
 setInterval(updateDateTime, 1000);
+
+window.onload = () => {
+  let toDoList = JSON.parse(localStorage.getItem("toDoList"));
+  addTask(toDoList);
+
+  updateDateTime();
+
+  const addButton = document.querySelector(".inputContainer button");
+  addButton.addEventListener("click", createTask);
+};
